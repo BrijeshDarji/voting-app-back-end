@@ -21,9 +21,7 @@
     "mongoose": "^6.2.3",
     "npm-check-updates": "^12.4.0",
     "uuid": "^8.3.2",
-    "validator": "^13.7.0"
-  },
-  "devDependencies": {
+    "validator": "^13.7.0",
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.16.8",
