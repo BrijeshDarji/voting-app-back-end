@@ -73,17 +73,4 @@ userSchema.methods.isPasswordChangedAfterSignIn = function (JWTTimeStamp) {
     return false
 }
 
-userSchema.methods.generatePasswordToken = function () {
-    const resetToken = crypto.randomBytes(32).toString("hex")
-
-    this.password_reset_token = crypto
-        .createHash("sha256")
-        .update(resetToken)
-        .digest("hex")
-
-    this.password_reset_expiry = Date.now() + 10 * 60 * 1000
-
-    return resetToken
-}
-
 module.exports = mongoose.model("User", userSchema)
